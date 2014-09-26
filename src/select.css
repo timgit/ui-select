@@ -77,6 +77,22 @@
   border-bottom-right-radius: 0;
 }
 
+/* Refactor to CSS from width calculation in JS for input box with tags for hidden control support on multi-select*/
+.ui-select-match-wrapper {
+  display: table;  
+}
+.ui-select-match-wrapper .ui-select-match {
+    display: table-cell;
+}
+.ui-select-match-wrapper input.ui-select-search {
+    width: 100%;
+    display: table-cell;
+}
+.select2-search-field {
+    width: 100%;
+    display: table-cell;    
+}
+
 .ui-select-bootstrap > .ui-select-match {
   /* Instead of center because of .btn */
   text-align: left;

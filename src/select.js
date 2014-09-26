@@ -328,7 +328,7 @@
 
         if(ctrl.multiple){
           ctrl.selected.push(item);
-          ctrl.sizeSearchInput();
+          //ctrl.sizeSearchInput();
         } else {
           ctrl.selected = item;
         }
@@ -358,7 +358,7 @@
     ctrl.removeChoice = function(index){
       ctrl.selected.splice(index, 1);
       ctrl.activeMatchIndex = -1;
-      ctrl.sizeSearchInput();
+      //ctrl.sizeSearchInput();
     };
 
     ctrl.getPlaceholder = function(){
@@ -367,16 +367,16 @@
       return ctrl.placeholder;
     };
 
-    ctrl.sizeSearchInput = function(){
-      var input = _searchInput[0],
-          container = _searchInput.parent().parent()[0];
-      _searchInput.css('width','10px');
-      $timeout(function(){
-        var newWidth = container.clientWidth - input.offsetLeft - 10;
-        if(newWidth < 50) newWidth = container.clientWidth;
-        _searchInput.css('width',newWidth+'px');
-      }, 0, false);
-    };
+    //ctrl.sizeSearchInput = function(){
+    //  var input = _searchInput[0],
+    //      container = _searchInput.parent().parent()[0];
+    //  _searchInput.css('width','10px');
+    //  $timeout(function(){
+    //    var newWidth = container.clientWidth - input.offsetLeft - 10;
+    //    if(newWidth < 50) newWidth = container.clientWidth;
+    //    _searchInput.css('width',newWidth+'px');
+    //  }, 0, false);
+    //};
 
     function _handleDropDownSelection(key) {
       var processed = true;
@@ -900,9 +900,9 @@
           $select.placeholder = placeholder !== undefined ? placeholder : uiSelectConfig.placeholder;
         });
 
-        if($select.multiple){
-          $select.sizeSearchInput();
-        }
+        //if($select.multiple){
+        //  $select.sizeSearchInput();
+        //}
 
       }
     };
